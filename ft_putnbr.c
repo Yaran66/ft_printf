@@ -6,16 +6,13 @@
 /*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:46:19 by wjasmine          #+#    #+#             */
-/*   Updated: 2021/12/08 11:14:20 by wjasmine         ###   ########.fr       */
+/*   Updated: 2021/12/08 16:54:29 by wjasmine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
 void	ft_putnbr(long i)
 {
-//	long	i;
-//
-//	i = n;
 	if (i < 0 )
 	{
 		ft_putchar ('-');

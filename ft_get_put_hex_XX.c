@@ -6,20 +6,20 @@
 /*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 10:54:58 by wjasmine          #+#    #+#             */
-/*   Updated: 2021/12/09 12:15:12 by wjasmine         ###   ########.fr       */
+/*   Updated: 2021/12/09 20:16:10 by wjasmine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int	ft_get_put_hex_XX(unsigned long n)
+int	ft_get_put_hex_xx(long n)
 {
 	size_t	len;
 
 	len = 0;
-//	if (n < 0)
-//		n = n + 4294967296;
+	if (n < 0)
+		n = n + 4294967296;
 	if (n >= 16)
-		len = ft_get_put_hex_XX (n / 16);
+		len = ft_get_put_hex_xx (n / 16);
 	len++;
 	if ((n % 16) < 10)
 		ft_putchar ((char)('0' + (n % 16)));

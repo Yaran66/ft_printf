@@ -6,18 +6,18 @@
 /*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 09:55:50 by wjasmine          #+#    #+#             */
-/*   Updated: 2021/12/09 12:15:12 by wjasmine         ###   ########.fr       */
+/*   Updated: 2021/12/09 12:28:19 by wjasmine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int	ft_get_put_hex_x(unsigned long n)
+int	ft_get_put_hex_x(long n)
 {
 	size_t	len;
 
 	len = 0;
-//	if (n < 0)
-//		n = n + 4294967296;
+	if (n < 0)
+		n = n + 4294967296;
 	if (n >= 16)
 		len = ft_get_put_hex_x (n / 16);
 	len++;

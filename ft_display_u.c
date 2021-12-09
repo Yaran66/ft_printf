@@ -13,7 +13,7 @@
 
 int	ft_display_u(va_list ap)
 {
-	long i;
+	long	i;
 
 	i = va_arg(ap, int);
 	if (i < 0)
@@ -21,13 +21,3 @@ int	ft_display_u(va_list ap)
 	ft_putnbr(i);
 	return (ft_numlen(i));
 }
-
-//int main()
-//{
-//	long i;
-//
-//	i = 4294967295;
-//	printf("%d", (printf("%u", i)));
-//	printf("%d", (ft_printf("%u", 4294967295)));
-//	return(0);
-//}

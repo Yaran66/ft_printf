@@ -15,12 +15,3 @@ void	ft_putstr(char *s)
 {
 	write(1, s, ft_strlen(s));
 }
-
-//int main()
-//{
-//	char *line;
-//
-//	line = "Very nice snowy morniung";
-//	ft_putstr(line);
-//	return (0);
-//}
