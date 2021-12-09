@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_display_c.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/03 15:42:41 by wjasmine          #+#    #+#             */
-/*   Updated: 2021/12/06 12:45:54 by wjasmine         ###   ########.fr       */
+/*   Created: 2021/12/08 10:46:19 by wjasmine          #+#    #+#             */
+/*   Updated: 2021/12/08 11:14:20 by wjasmine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int	ft_display_с(va_list ap)
+void	ft_putnbr(long i)
 {
-	ft_putchar((char)(va_arg(ap, int)));
-	return (1);
+//	long	i;
+//
+//	i = n;
+	if (i < 0 )
+	{
+		ft_putchar ('-');
+		i = i * (-1);
+	}
+	if (i < 10)
+		ft_putchar ((char)('0' + i));
+	if (i > 9)
+	{
+		ft_putnbr (i / 10);
+		ft_putchar ((char)('0' + (i % 10)));
+	}
 }

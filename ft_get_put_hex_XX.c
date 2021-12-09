@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_display_c.c                                     :+:      :+:    :+:   */
+/*   ft_get_put_hex_XX.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/03 15:42:41 by wjasmine          #+#    #+#             */
-/*   Updated: 2021/12/06 12:45:54 by wjasmine         ###   ########.fr       */
+/*   Created: 2021/12/09 10:54:58 by wjasmine          #+#    #+#             */
+/*   Updated: 2021/12/09 12:15:12 by wjasmine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int	ft_display_с(va_list ap)
+int	ft_get_put_hex_XX(unsigned long n)
 {
-	ft_putchar((char)(va_arg(ap, int)));
-	return (1);
+	size_t	len;
+
+	len = 0;
+//	if (n < 0)
+//		n = n + 4294967296;
+	if (n >= 16)
+		len = ft_get_put_hex_XX (n / 16);
+	len++;
+	if ((n % 16) < 10)
+		ft_putchar ((char)('0' + (n % 16)));
+	if ((n % 16) > 9 && (n % 16) < 16)
+		ft_putchar ((char)('7' + (n % 16)));
+	return (len);
 }

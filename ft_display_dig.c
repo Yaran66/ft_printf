@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_display_c.c                                     :+:      :+:    :+:   */
+/*   ft_display_dig.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/03 15:42:41 by wjasmine          #+#    #+#             */
-/*   Updated: 2021/12/06 12:45:54 by wjasmine         ###   ########.fr       */
+/*   Created: 2021/12/08 10:38:18 by wjasmine          #+#    #+#             */
+/*   Updated: 2021/12/09 11:55:25 by wjasmine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_printf.h"
+# include "ft_printf.h"
 
-int	ft_display_с(va_list ap)
+int	ft_display_dig(va_list ap)
 {
-	ft_putchar((char)(va_arg(ap, int)));
-	return (1);
+	long i;
+
+	i = va_arg(ap, int);
+	ft_putnbr(i);
+	return (ft_numlen(i));
 }
+

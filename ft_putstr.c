@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_display_c.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/03 15:42:41 by wjasmine          #+#    #+#             */
-/*   Updated: 2021/12/06 12:45:54 by wjasmine         ###   ########.fr       */
+/*   Created: 2021/12/07 11:34:17 by wjasmine          #+#    #+#             */
+/*   Updated: 2021/12/07 11:43:42 by wjasmine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int	ft_display_с(va_list ap)
+void	ft_putstr(char *s)
 {
-	ft_putchar((char)(va_arg(ap, int)));
-	return (1);
+	write(1, s, ft_strlen(s));
 }
+
+//int main()
+//{
+//	char *line;
+//
+//	line = "Very nice snowy morniung";
+//	ft_putstr(line);
+//	return (0);
+//}
